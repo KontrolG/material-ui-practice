@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  height: 670px;
+}
+header {
+  padding-top: 2em;
+}
+.images {
+  display: flex;
+  margin: 2% auto;
+  flex-wrap: wrap;
+  height: 500px;
+  overflow: auto;
+}
+
+.single-picture {
+  max-width: 350px;
+  max-height: 350px;
+  align-self: auto;
+  margin: 1% 2px;
+  flex-grow: 1;
+  vertical-align: middle;
+}
