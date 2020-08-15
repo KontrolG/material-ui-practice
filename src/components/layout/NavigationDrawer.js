@@ -4,19 +4,19 @@ import List from "@material-ui/core/List";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 
-const NavigationDrawer = () => {
+const NavigationDrawer = ({ classes, isOpen, closeDrawer }) => {
   return (
     <Drawer
-      className={classes.drawer}
       variant="persistent"
       anchor="right"
-      open={open}
+      className={classes.drawer}
+      open={isOpen}
       classes={{
         paper: classes.drawerPaper
       }}
     >
       <div className={classes.drawerHeader}>
-        <IconButton onClick={handleDrawerClose}>
+        <IconButton onClick={closeDrawer}>
           <ChevronRightIcon />
         </IconButton>
       </div>
