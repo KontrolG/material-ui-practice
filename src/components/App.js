@@ -1,7 +1,6 @@
 import React, { StrictMode } from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import MainRouter from "./components/MainRouter";
-import "./App.css";
+import MainRouter from "./MainRouter";
 
 const App = () => {
   return (

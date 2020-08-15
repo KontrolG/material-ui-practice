@@ -1,4 +1,4 @@
-import examples from "../examples";
+import examples from "../data/examples";
 const toNavigationLink = ({ title }) => ({ text: title, to: "#" });
 
 const getMainNavigationLinks = () => {

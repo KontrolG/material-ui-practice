@@ -6,7 +6,7 @@ import ExamplesSection from "./ExamplesSection";
 import NavigationDrawer from "./layout/NavigationDrawer";
 import useToggleOpen from "../hooks/useToggleOpen";
 import useMatchesBreakpoint from "../hooks/useMatchesBreakpoint";
-import getMainNavigationLinks from "./getMainNavigationLinks";
+import getMainNavigationLinks from "../utils/getMainNavigationLinks";
 
 const MainRouter = () => {
   const [drawerIsOpen, openDrawer, closeDrawer] = useToggleOpen(false);

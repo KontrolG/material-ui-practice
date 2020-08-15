@@ -4,7 +4,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import ExampleCard from "./ExampleCard";
-import examples from "../examples";
+import examples from "../data/examples";
 
 const toGridExampleItems = example => (
   <Grid item md={4} sm={6} xs={12} key={getRandomKey()}>
