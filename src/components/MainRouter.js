@@ -7,18 +7,29 @@ import MainHeader from "./MainHeader";
 import ExamplesSection from "./ExamplesSection";
 import NavigationDrawer from "./layout/NavigationDrawer";
 import useToggleOpen from "../hooks/useToggleOpen";
+import useMatchesBreakpoint from "../hooks/useMatchesBreakpoint";
+import getMainNavigationLinks from "./getMainNavigationLinks";
 
 const MainRouter = props => {
   const [drawerIsOpen, openDrawer, closeDrawer] = useToggleOpen(false);
+  const isOnSmallDevice = useMatchesBreakpoint("down", "sm");
+  const mainNavigationLinks = getMainNavigationLinks();
 
   return (
     <Fragment>
-      <TopBar {...{ drawerIsOpen, openDrawer }} />
+      <TopBar
+        {...{ drawerIsOpen, openDrawer, mainNavigationLinks, isOnSmallDevice }}
+      />
       <Container component="main">
         <MainHeader />
         <ExamplesSection />
       </Container>
-      <NavigationDrawer isOpen={drawerIsOpen} closeDrawer={closeDrawer} />
+      <NavigationDrawer
+        isOpen={drawerIsOpen}
+        closeDrawer={closeDrawer}
+        links={mainNavigationLinks}
+        hidden={!isOnSmallDevice}
+      />
     </Fragment>
   );
 };

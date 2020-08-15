@@ -22,18 +22,12 @@ const toLinkElement = ({ to, text }) => (
   </Link>
 );
 
-const useIsOnSmallDevice = () => {
-  const theme = useTheme();
-  return useMediaQuery(theme.breakpoints.down("md"));
-};
-
-const Navigation = ({ links }) => {
+const Navigation = ({ links, ...props }) => {
   const classes = useStyles();
-  const IsOnSmallDevice = useIsOnSmallDevice();
   const linksElements = links.map(toLinkElement);
 
   return (
-    <Box component="nav" className={classes.root} hidden={IsOnSmallDevice}>
+    <Box component="nav" className={classes.root} {...props}>
       {linksElements}
     </Box>
   );
