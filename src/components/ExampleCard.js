@@ -19,7 +19,7 @@ const useLoadImage = imageSrc => {
   const [image, setImage] = useState(null);
 
   const loadImage = async () => {
-    const imageImport = await import("../assets/img/test.jpg");
+    const imageImport = await import(`../assets/${imageSrc}`);
     setImage(imageImport);
   };
 
