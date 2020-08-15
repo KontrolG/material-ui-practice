@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import getRandomKey from "uuid/v4";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Link from "@material-ui/core/Link";
 
