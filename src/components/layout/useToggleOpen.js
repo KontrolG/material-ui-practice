@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useHandleOpen = initialIsOpen => {
+const useHandleOpen = (initialIsOpen = false) => {
   const [isOpen, setIsOpen] = useState(initialIsOpen);
 
   const setToOpen = () => {
