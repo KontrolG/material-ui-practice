@@ -9,8 +9,6 @@ const navigationLinksSelector = "& > a";
 
 const useStyles = makeStyles({
   root: {
-    marginLeft: "auto",
-    height: "100%",
     [navigationLinksSelector]: {
       padding: "1em",
       margin: "0 0.5em"

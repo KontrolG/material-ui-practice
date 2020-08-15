@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import Navigation from "./Navigation";
 import DrawerOpenerButton from "./DrawerOpenerButton";
 import examples from "../../examples";
+import Box from "@material-ui/core/Box";
 
 const toNavigationLink = ({ title }) => ({ text: title, to: "#" });
 
@@ -19,12 +20,11 @@ const TopBar = ({ classes, openDrawer, drawerIsOpen }) => {
   const mainNavigationLinks = getMainNavigationLinks();
 
   return (
-    <AppBar
-      position="sticky"
-      className={clsx(classes.appBar, drawerIsOpen && classes.appBarShift)}
-    >
+    <AppBar position="sticky">
       <Toolbar>
-        <Typography variant="h6">Practices</Typography>
+        <Box marginRight="auto">
+          <Typography variant="h6">Practices</Typography>
+        </Box>
         <Navigation links={mainNavigationLinks} />
         <DrawerOpenerButton hidden={drawerIsOpen} onClick={openDrawer} />
       </Toolbar>
