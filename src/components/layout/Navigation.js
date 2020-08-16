@@ -5,18 +5,30 @@ import Box from "@material-ui/core/Box";
 import Link from "@material-ui/core/Link";
 
 const navigationLinksSelector = "& > a";
+const navigationLinksOnHoverSelector = `${navigationLinksSelector}:hover`;
 
-const useStyles = makeStyles({
-  root: {
-    [navigationLinksSelector]: {
-      padding: "1em",
-      margin: "0 0.5em"
+const useStyles = makeStyles(theme => {
+  const inheritHeight = { minHeight: "inherit", height: "inherit" };
+  return {
+    root: {
+      ...inheritHeight,
+      [navigationLinksSelector]: {
+        ...inheritHeight,
+        display: "inline-flex",
+        alignItems: "center",
+        padding: theme.spacing(2),
+        borderBottom: "2px solid transparent"
+      },
+      [navigationLinksOnHoverSelector]: {
+        transition: theme.transitions.create("border-bottom-color"),
+        borderBottomColor: "currentColor"
+      }
     }
-  }
+  };
 });
 
 const toLinkElement = ({ to, text }) => (
-  <Link href={to} color="inherit" key={getRandomKey()}>
+  <Link href={to} color="inherit" key={getRandomKey()} underline="none">
     {text}
   </Link>
 );
