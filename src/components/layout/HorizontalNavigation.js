@@ -33,7 +33,7 @@ const toLinkElement = ({ to, text }) => (
   </Link>
 );
 
-const Navigation = ({ links, ...props }) => {
+const HorizontalNavigation = ({ links, ...props }) => {
   const classes = useStyles();
   const linksElements = links.map(toLinkElement);
 
@@ -44,4 +44,4 @@ const Navigation = ({ links, ...props }) => {
   );
 };
 
-export default Navigation;
+export default HorizontalNavigation;
